@@ -1,7 +1,6 @@
 language: ruby
 rvm:
   - 2.3.1
-before_install: gem install bundler
 before_script:
   - psql -c 'create database app_test;' -U $DB_USER
 cache:
