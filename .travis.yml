@@ -4,3 +4,8 @@ rvm:
 before_install: gem install bundler
 cache:
   - bundler
+services:
+  - postgresql
+test:
+  adapter: postgresql
+  database: app_test
