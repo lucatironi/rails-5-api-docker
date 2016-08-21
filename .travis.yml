@@ -11,3 +11,6 @@ services:
 test:
   adapter: postgresql
   database: app_test
+addons:
+  code_climate:
+    repo_token: 09e88bdc3d9f9e59f44e3f6efac5d7686a23655c96d43f6ee7f806c481a84b2c
