@@ -26,6 +26,7 @@ gem 'warden'
 group :test do
   gem 'shoulda-matchers', require: false
   gem 'rails-controller-testing'
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :development, :test do
