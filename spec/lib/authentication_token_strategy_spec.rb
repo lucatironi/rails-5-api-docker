@@ -5,7 +5,7 @@ RSpec.describe AuthenticationTokenStrategy, type: :model do
     User.create(email: 'user@example.com', password: 'password')
   end
   let!(:authentication_token) do
-    AuthenticationToken.create(user_id: user.id, body: 'token', last_used_at: DateTime.current)
+    AuthenticationToken.create(user_id: user.id, body: 'token', last_used_at: Date.current)
   end
 
   let(:env) do

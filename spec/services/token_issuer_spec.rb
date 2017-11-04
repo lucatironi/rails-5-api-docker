@@ -18,7 +18,7 @@ RSpec.describe TokenIssuer, type: :model do
   describe '.create_and_return_token' do
     it 'creates a new token for the user' do
       expect(resource.authentication_tokens).to receive(:create!)
-        .with(last_used_at: DateTime.current,
+        .with(last_used_at: Date.current,
               ip_address: request.remote_ip,
               user_agent: request.user_agent)
         .and_return(authentication_token)

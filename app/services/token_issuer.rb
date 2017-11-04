@@ -23,7 +23,7 @@ class TokenIssuer
 
   def create_and_return_token(resource, request)
     token = resource.authentication_tokens.create!(
-      last_used_at: DateTime.current,
+      last_used_at: Date.current,
       ip_address:   request.remote_ip,
       user_agent:   request.user_agent
     )

@@ -33,6 +33,6 @@ class AuthenticationTokenStrategy < ::Warden::Strategies::Base
   end
 
   def touch_token(token)
-    token.update_attribute(:last_used_at, DateTime.current) if token.last_used_at < 1.hour.ago
+    token.update_attribute(:last_used_at, Date.current) if token.last_used_at < 1.hour.ago
   end
 end
